@@ -1,0 +1,30 @@
+#INCLUDE "RWMAKE.CH"        // Incluido pelo assistente de conversao do AP5 IDE em 26/09/00
+
+/*ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+±±ºPrograma  ³PAGMOD    ºAutor  ³Eduardo Augusto     º Data ³  26/02/2013 º±±
+±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
+±±ºDesc.     ³Declaracao de variaveis utilizadas no programa atraves da   º±±
+±±º			 ³funcao SetPrvt, que criara somente as variaveis definidas   º±±
+±±º			 ³pelo usuario, identificando as variaveis publicas do sistemaº±±
+±±º			 ³utilizadas no codigo. 									  º±±
+±±º 		 ³Incluido pelo assistente de conversao do AP5 IDE 			  º±±
+±±º 		 ³															  º±±
+±±º 		 ³"PROGRAMA PARA INDICAR A MODALIDADE DO PAGAMENTO"			  º±±
+±±º 		 ³CNAB BRADESCO A PAGAR (PAGFOR) - POSICOES (264-265)         º±±
+±±º          ³                                                            º±±
+±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
+±±ºUso       ³ Shoeller								                      º±±
+ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß*/
+
+User Function Pagmod()        // Incluido pelo assistente de conversao do AP5 IDE em 26/09/00
+SetPrvt("_AMODEL,")
+_aModel := SUBSTR(SEA->EA_MODELO,1,2)
+IF _aModel == "  "
+   IF SUBSTR(SE2->E2_CODBAR,1,3) == "237"
+      _aModel := "30"
+   ELSE
+      _aModel := "31"
+   ENDIF
+ENDIF
+// Substituido pelo assistente de conversao do AP5 IDE em 26/09/00 ==> __Return(_aModel)
+Return(_aModel)        // Incluido pelo assistente de conversao do AP5 IDE em 26/09/00

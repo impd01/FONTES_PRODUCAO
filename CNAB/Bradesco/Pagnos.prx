@@ -1,0 +1,27 @@
+#INCLUDE "RWMAKE.CH"        // Incluido pelo assistente de conversao do AP5 IDE em 26/09/00
+
+/*ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+±±ºPrograma  ³PAGNOS    ºAutor  ³Eduardo Augusto     º Data ³  26/02/2013 º±±
+±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
+±±ºDesc.     ³Declaracao de variaveis utilizadas no programa atraves da   º±±
+±±º			 ³funcao SetPrvt, que criara somente as variaveis definidas   º±±
+±±º			 ³pelo usuario, identificando as variaveis publicas do sistemaº±±
+±±º			 ³utilizadas no codigo. 									  º±±
+±±º 		 ³Incluido pelo assistente de conversao do AP5 IDE 			  º±±
+±±º 		 ³															  º±±
+±±º 		 ³"RETORNA O NOSSO NUMERO QUANDO COM VALOR NO E2_CODBAR, E	  º±±
+±±º 		 ³ ZEROS QUANDO NAO TEM VALOR."						          º±±
+±±º          ³ CNAB BRADESCO A PAGAR (PAGFOR) - POSICOES (139-150)        º±±
+±±ÌÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹±±
+±±ºUso       ³ Shoeller								                      º±±
+ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß*/
+
+User Function Pagnos()        // Incluido pelo assistente de conversao do AP5 IDE em 26/09/00
+SetPrvt("_RETNOS,")
+IF SUBS(SE2->E2_CODBAR,01,3) != "237"
+    _RETNOS := "000000000000"
+Else
+    _RETNOS := PADL(SUBSTR(SE2->E2_CODBAR,26,11),12,"0")
+EndIf
+// Substituido pelo assistente de conversao do AP5 IDE em 26/09/00 ==> __return(_RETNOS)
+Return(_RETNOS)        // incluido pelo assistente de conversao do AP5 IDE em 26/09/00
