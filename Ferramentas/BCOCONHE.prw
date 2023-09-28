@@ -27,7 +27,7 @@
 */
 
 User Function BCOCONHE()
-
+ 
 Private oProcess	:= Nil
 
 	oProcess := MsNewProcess():New( { || PROCESSA() }, 'Aguarde', 'Atualizando Registros ...', .T. )
