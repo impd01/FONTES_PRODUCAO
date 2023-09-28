@@ -129,7 +129,7 @@ oArea:AddCollumn("L02DLG"   ,100,.F.,"L02")
 //oArea:AddCollumn("L03DLG"   , 40,.F.,"L03")
 oArea:AddCollumn("L03SEP"   , 100,.F.,"L03")
 
-oArea:AddWindow("L01PARA" ,"L01PARA"	,"Parâmetros"						, 100,.F.,.F.,/*bAction*/,"L01",/*bGotFocus*/)
+oArea:AddWindow("L01PARA" ,"L01PARA"	,"Parâmetros"						, 100,.F.,.F.,/*bAction*/,"L01",/*bGotFocus*/) 
 oArea:AddWindow("L01TOTA" ,"L01TOTA"	,"Totais" 							, 100,.F.,.F.,/*bAction*/,"L01",/*bGotFocus*/)
 oArea:AddWindow("L01BOTO" ,"L01BOTO"	,"Funções" 							, 100,.F.,.F.,/*bAction*/,"L01",/*bGotFocus*/)
 oArea:AddWindow("L02DLG" ,"L02DLG"  	,"Informações dos Pedidos"							, 100,.F.,.F.,/*bAction*/,"L02",/*bGotFocus*/)
