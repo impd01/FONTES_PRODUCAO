@@ -1087,9 +1087,10 @@ User Function IM69A01F2()
 		aEval(aLet,{|x| cTextOrd += x}) 
 		M->PERMISS := PadR(cTextOrd,6)
 		SX5->(DbSeek(xFilial("SX5")+"_R"+oGetUsu:aCols[oGetUsu:nAt][2]))
-		RecLock("SX5",.F.)
-		SX5->X5_DESCRI := Alltrim(M->PERMISS)
-		SX5->(MsUnlock())	
+	//	RecLock("SX5",.F.)
+	//	SX5->X5_DESCRI := Alltrim(M->PERMISS)
+	//	SX5->(MsUnlock())	
+		FwPutSX5("", "_R", oGetUsu:aCols[oGetUsu:nAt][2], Alltrim(M->PERMISS), "", "", "")	//CodeAnalysis
 	EndIf 
 	
 	RestArea(aArea)
@@ -1154,15 +1155,16 @@ Static Function IncUsu()
 			EndIf
 			oGetUsu:SetArray(aColsUsu)
 			oGetUsu:Refresh()
-			RecLock("SX5",.T.)
-			SX5->X5_FILIAL	:= xFilial("SX5")
-			SX5->X5_TABELA	:= "_R"
-			SX5->X5_CHAVE	:= cCodUser
-			SX5->X5_DESCRI	:= Space(6)
-			SX5->X5_DESCSPA	:= cLogin
-			SX5->X5_DESCENG := cUserNom
-			SX5->(MsUnlock())
-			lRet  := .T.
+//			RecLock("SX5",.T.)
+//			SX5->X5_FILIAL	:= xFilial("SX5")
+//			SX5->X5_TABELA	:= "_R"
+//			SX5->X5_CHAVE	:= cCodUser
+//			SX5->X5_DESCRI	:= Space(6)
+//			SX5->X5_DESCSPA	:= cLogin
+//			SX5->X5_DESCENG := cUserNom
+//			SX5->(MsUnlock())
+			FwPutSX5("", "_R", cCodUser, Alltrim(M->PERMISS), Space(6), cLogin, cUserNom)	//CodeAnalysis
+		lRet  := .T.
 		EndIf
 	EndIf
 	

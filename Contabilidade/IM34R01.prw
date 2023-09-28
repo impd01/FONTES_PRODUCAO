@@ -144,7 +144,7 @@ Endif
 //	If lImpRazR4 
 //		U_CTBR400R4(aCtbMoeda,lCusto,lItem,lCLVL,@cArqTmp,aSelFil )
 //	Else
-		U_CTBR400R3( cContaIni, cContaFim, dDataIni, dDataFim, cMoeda, cSaldos,;
+		CTBR400R3( cContaIni, cContaFim, dDataIni, dDataFim, cMoeda, cSaldos,;
 					cBook, lCusto, cCustoIni, cCustoFim, lItem, cItemIni, cItemFim,;
 					lClVl, cClvlIni, cClvlFim,lSaltLin,cMoedaDesc,aSelFil ) // Executa versão anterior do fonte
 //	Endif 
@@ -1226,7 +1226,7 @@ Return (lDeixa)
 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
 ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
 /*/
-User Function CTBR400R3(	cContaIni, cContaFim, dDataIni, dDataFim, cMoeda, cSaldos,;
+Static Function CTBR400R3(	cContaIni, cContaFim, dDataIni, dDataFim, cMoeda, cSaldos,;
 					cBook, lCusto, cCustoIni, cCustoFim, lItem, cItemIni, cItemFim,;
 					lClVl, cClvlIni, cClvlFim,lSaltLin,cMoedaDesc,aSelFil )
 

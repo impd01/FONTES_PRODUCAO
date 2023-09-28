@@ -11,7 +11,7 @@
 #DEFINE VALOR_BX 8
 #DEFINE DATA_BX  14
 
-/*/{Protheus.doc} IMPCONTV2
+/*/{Protheus.doc} IMPCONT
 Rotina para importação de planilha para criaï¿½ï¿½o de título
 @type  Function
 @author Vinicius Henrique
@@ -19,7 +19,7 @@ Rotina para importação de planilha para criaï¿½ï¿½o de título
 @version 1.1
 /*/
 
-User Function IMPCONTV2()
+User Function IMPCONT()
 
 Local llOk      := .T.
 Local alButton  := {}

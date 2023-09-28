@@ -15,6 +15,7 @@ Exemplo de Modelo 1 para cadastro de Artistas
 /*/
  
 User Function xBrowseCad()
+
     Local aArea   := GetArea()
     Local oBrowse
     Local cFunBkp := FunName()
@@ -57,7 +58,7 @@ Static Function MenuDef()
      
     //Adicionando opções
     ADD OPTION aRot TITLE 'Visualizar' ACTION 'VIEWDEF.xBrowseCad' OPERATION MODEL_OPERATION_VIEW   ACCESS 0 //OPERATION 1
-    ADD OPTION aRot TITLE 'Legenda'    ACTION 'u_zMod1Leg'      OPERATION 6                      ACCESS 0 //OPERATION X
+    ADD OPTION aRot TITLE 'Legenda'    ACTION 'u_zMod1ZB'      OPERATION 6                      ACCESS 0 //OPERATION X
     ADD OPTION aRot TITLE 'Incluir'    ACTION 'VIEWDEF.xBrowseCad' OPERATION MODEL_OPERATION_INSERT ACCESS 0 //OPERATION 3
     ADD OPTION aRot TITLE 'Alterar'    ACTION 'VIEWDEF.xBrowseCad' OPERATION MODEL_OPERATION_UPDATE ACCESS 0 //OPERATION 4
     ADD OPTION aRot TITLE 'Excluir'    ACTION 'VIEWDEF.xBrowseCad' OPERATION MODEL_OPERATION_DELETE ACCESS 0 //OPERATION 5
@@ -181,7 +182,7 @@ Static Function valid(oModel)
 Return lRet
  
  
-User Function zMod1Leg()
+User Function zMod1ZB()
     Local aLegenda := {}
      
     //Monta as cores

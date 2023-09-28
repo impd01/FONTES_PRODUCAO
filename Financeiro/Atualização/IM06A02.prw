@@ -1453,8 +1453,12 @@ User Function IMIRRF()
 
 	aCampos := IRFStruArq()
 
-	cArqTmp := CriaTrab( aCampos , .T.)
-	dbUseArea( .T.,, cArqTmp, "cArqTmp", if(.F. .OR. .F., !.F., NIL), .F. )
+	//cArqTmp := CriaTrab( aCampos , .T.)
+	MsCreate(cArqTmp,aCampos,"TOPCONN")	//CodeAnalysis
+
+	//dbUseArea( .T.,, cArqTmp, "cArqTmp", if(.F. .OR. .F., !.F., NIL), .F. )
+	dbUseArea( .T.,"TOPCONN", cArqTmp, "cArqTmp", if(.F. .OR. .F., !.F., NIL), .F. )
+	
 	//旼컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴커
 	//� "Importa" o arquivo TXT com a tabela do I.R.       �
 	//읕컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴켸

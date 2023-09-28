@@ -24,11 +24,11 @@ User Function xcombo()
     cOpcoes += "7=CONDOMINIO;"
     cOpcoes += "8=IPTU;"
     cOpcoes += "9=JURIDICO;"
-    cOpcoes += "10=JURIDICO RESIDENCIAL;"
-    cOpcoes += "11=JURIDICO COMERCIAL;"
-    cOpcoes += "12=ACORDO COMERCIAL;"
-    cOpcoes += "13=ACORDO RESIDENCIAL;"
-    cOpcoes += "14=PREST. SERVICO;"
+    cOpcoes += "A=JURIDICO RESIDENCIAL;"
+    cOpcoes += "B=JURIDICO COMERCIAL;"
+    cOpcoes += "C=ACORDO COMERCIAL;"
+    cOpcoes += "D=ACORDO RESIDENCIAL;"
+    cOpcoes += "E=PREST. SERVICO;"
 
 
 RestArea(aArea)

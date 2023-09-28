@@ -78,16 +78,19 @@ AADD(aField,{"MSBLQL"     	, "C" ,TamSX3("RA_MSBLQL")		[1],0})
 
 
 
-cArqTrab   := CriaTrab(aField,.T.)
-
-	
+//cArqTrab   := CriaTrab(aField,.T.)
+MsCreate(cArqTrab,aField,"TOPCONN")	//CodeAnalysis
 	
 	
 	If Select("TRB") <> 0
 		dbSelectArea("TRB")
 		dbCloseArea()
 	EndIf	
-dbUseArea(.T.,, cArqTrab,"TRB",.F.,.F.)
+
+dbUseArea(.T.,"TOPCONN", cArqTrab,"TRB",.F.,.F.)
+
+//dbUseArea(.T.,, cArqTrab,"TRB",.F.,.F.)
+
 ///TRB->(IndRegua("TRB", cArqTrab, "MAT", , , "Criando índices..."))
 	
 //TRB->(dbSetIndex(cArqTrab+OrdBagExt()))
