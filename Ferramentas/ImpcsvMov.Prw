@@ -340,7 +340,7 @@ Private lMsErroAuto := .F.
             If nValor <= 0
                 lProcessa := .F.
             Endif  
-
+//teste
             If lProcessa
 
                 aFINA100 := {   {"E5_FILIAL"      	,xFilial("SE5")            											,Nil},;
